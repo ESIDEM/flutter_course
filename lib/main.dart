@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
 
-main(){
+ void main() => runApp(MyApp());
 
-  runApp(MyApp());
-}
 
-class MyApp extends StatelessWidget{
+class MyApp extends StatelessWidget {
 
-  build(context){
-
-    return MaterialApp(home: Scaffold(appBar: AppBar(title: Text("Easy List"),),),);
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Easy List"),
+        ),
+        body: Card(child: Column(children: <Widget>[
+          Image.asset('assets/sam.jpg'), Text("Sam Esidem")
+        ],),),
+      ),
+    );
   }
-
-
 }
